@@ -1,0 +1,5 @@
+scrape_configs:
+  - job_name: 'github_exporter'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['localhost:8080']  # Replace with the correct host and port if necessary

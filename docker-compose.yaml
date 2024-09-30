@@ -1,0 +1,10 @@
+services:
+  githubexporter:
+    build:
+      context: .  # Build context is the current directory
+      dockerfile: Dockerfile  # Specify the Dockerfile to use
+    image: githubexporter:latest  # Name the image
+    ports:
+      - "8080:8080"  # Map port 8080 of the container to port 8080 of the host
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
